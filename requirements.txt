@@ -1,0 +1,6 @@
+Flask
+requests
+Flask
+Pillow
+numpy
+tflite-runtime

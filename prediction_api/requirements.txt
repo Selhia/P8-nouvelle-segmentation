@@ -1,6 +1,4 @@
 Flask
 Pillow
 numpy
-tflite-runtime  # Plus léger que tensorflow
-# Ou si vous préférez garder le package complet :
-# tensorflow
+tflite-runtime 
