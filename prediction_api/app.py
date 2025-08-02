@@ -7,8 +7,8 @@ import os
 app = Flask(__name__)
 
 # --- Configuration ---
-MODEL_PATH = os.path.join('model', 'unet_resnet50_cityscapes.tflite')
-IMAGE_DIR = os.path.join('static', 'uploads')
+MODEL_PATH = os.path.join('prediction_api', 'model', 'unet_resnet50_cityscapes.tflite')
+IMAGE_DIR = os.path.join('prediction_api', 'static', 'uploads')
 # La taille d'entrée attendue par le modèle TFLite
 INPUT_SHAPE = (256, 512)
 
@@ -97,5 +97,4 @@ def uploaded_file(filename):
     return send_from_directory(IMAGE_DIR, filename)
 
 if __name__ == '__main__':
-    # Utilise un port différent de l'app de présentation
-    app.run(debug=True, port=5001)
+    app.run(debug=True, host="0.0.0.0", port=5001)
