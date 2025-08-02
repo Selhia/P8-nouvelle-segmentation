@@ -3,5 +3,4 @@ requests
 Flask
 Pillow
 numpy
-tflite-runtime
 tensorflow
